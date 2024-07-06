@@ -5,7 +5,7 @@ import { faTh, faChartBar, faBell, faCog } from '@fortawesome/free-solid-svg-ico
 
 const Footer: React.FC = () => {
     return (
-        <footer className="fixed bottom-0 w-full bg-white py-6 border-t flex justify-around max-w-6xl px-4 sm:px-0">
+        <footer className="z-2 fixed bottom-0 w-full bg-white py-6 border-t flex justify-around max-w-6xl px-4 sm:px-0">
             <NavLink
                 to="/home"
                 className={({ isActive }) =>
