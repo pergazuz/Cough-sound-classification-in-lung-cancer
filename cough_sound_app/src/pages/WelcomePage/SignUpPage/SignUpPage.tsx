@@ -1,5 +1,5 @@
 import React from 'react';
-import WelcomeLogo from '../../assets/welcome_logo.png';
+import WelcomeLogo from '../../../assets/welcome_logo.png';
 
 const SignUpPage: React.FC = () => {
     return (

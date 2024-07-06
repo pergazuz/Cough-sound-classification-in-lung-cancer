@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMicrophone, faStop } from '@fortawesome/free-solid-svg-icons';
-import Logo from '../../assets/welcome_logo.png';
+import Logo from '../../../assets/welcome_logo.png';
 
 const LungCancerCheckPage: React.FC = () => {
     const navigate = useNavigate();

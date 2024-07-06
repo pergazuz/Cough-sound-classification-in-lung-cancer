@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import WelcomeLogo from '../../assets/welcome_logo.png';
+import WelcomeLogo from '../../../assets/welcome_logo.png';
 import { useNavigate } from 'react-router-dom';
 import  { LoginUser } from './LoginUser.ts';
 
