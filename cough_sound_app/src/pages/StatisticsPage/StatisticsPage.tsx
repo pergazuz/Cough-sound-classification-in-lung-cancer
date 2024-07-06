@@ -3,7 +3,12 @@ import Footer from '../Components/Footer';
 import Header from '../Components/Header';
 import StatisticsPageCard from './components/StatisticsPageCard';
 
-const statisticsData = [
+interface StatisticsData {
+    label: string;
+    value: string | number;
+}
+
+const statisticsData: StatisticsData[] = [
     // { label: 'Total Users', value: 1200 },
     // { label: 'Active Users', value: 900 },
     // { label: 'New Signups', value: 300 },
