@@ -6,6 +6,7 @@ import SignUpPage from './pages/SignUpPage/SignUpPage';
 import HomePage from './pages/HomePage/HomePage';
 import NotificationPage from './pages/NotificationPage/NotificationPage';
 import SettingsPage from './pages/SettingsPage/SettingsPage';
+import StatisticsPage from './pages/StatisticsPage/StatisticsPage';
 
 const App: React.FC = () => {
     return (
@@ -17,7 +18,7 @@ const App: React.FC = () => {
                 <Route path="/home" element={<HomePage />} />
                 <Route path="/notifications" element={<NotificationPage />} />
                 <Route path="/settings" element={<SettingsPage />} />
-                {/*<Route path="/statistics" element={<StatisticsPage />} /> /!* Placeholder *!/*/}
+                <Route path="/statistics" element={<StatisticsPage />} />
             </Routes>
         </Router>
     );
