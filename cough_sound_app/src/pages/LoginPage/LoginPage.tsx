@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import WelcomeLogo from '../../assets/welcome_logo.png'; // Update the path as needed
+import WelcomeLogo from '../../assets/welcome_logo.png';
+import { useNavigate } from 'react-router-dom';
 import  { LoginUser } from './LoginUser.ts';
 
 const LoginPage: React.FC = () => {
+    const navigate = useNavigate();
+
     // Demo user credentials
     const demoUser: LoginUser = {
         email: 'user@gmail.com',
@@ -19,7 +22,7 @@ const LoginPage: React.FC = () => {
         e.preventDefault();
 
         if (email === demoUser.email && password === demoUser.password) {
-            alert('Login successful!');
+            navigate('/home');
         } else {
             setError('Invalid email or password');
         }

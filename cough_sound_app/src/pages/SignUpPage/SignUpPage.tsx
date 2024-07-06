@@ -4,7 +4,7 @@ import WelcomeLogo from '../../assets/welcome_logo.png';
 const SignUpPage: React.FC = () => {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-white px-4">
-            <h1 className="mt-4 text-3xl font-bold text-purple-950 text-center">Hello Beautiful</h1>
+            <h1 className="mt-4 text-3xl font-bold text-purple-950 text-center">Hello!</h1>
             <h2 className="text-5xl font-bold text-purple-950 text-center">Sign Up</h2>
             <img src={WelcomeLogo} alt="Welcome" className="max-w-80 h-auto mt-4"/>
             <div className="mt-8 w-full max-w-md">
