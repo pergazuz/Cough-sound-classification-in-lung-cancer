@@ -1,23 +1,38 @@
 import React from 'react';
-import Header from '../Components/Header.tsx';
-import HomePageCard from './components/HomePageCard.tsx';
-import Footer from '../Components/Footer.tsx';
-import LungCheck from '../../assets/lung_check.png';
-import MedicalHistory from '../../assets/medical_history.png';
-import FindingYourself from '../../assets/finding_yourself.png';
-import LabResults from '../../assets/lab_result.png';
-import DietChart from '../../assets/diet_chart.png';
+import { Link } from 'react-router-dom';
+import Footer from '../Components/Footer';
+import Header from '../Components/Header';
+import LungCheckIcon from '../../assets/lung_check.png';
+import MedicalHistoryIcon from '../../assets/medical_history.png';
+import FindingYourselfIcon from '../../assets/finding_yourself.png';
+import LabResultsIcon from '../../assets/lab_result.png';
+import DietChartIcon from '../../assets/diet_chart.png';
 
 const HomePage: React.FC = () => {
     return (
         <div className="flex flex-col items-center min-h-screen bg-white px-4 py-8">
-            <Header title="👋 Hi Sky!"/>
+            <Header title="Hi Sky!" />
             <div className="w-full max-w-6xl grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 px-4 sm:px-0">
-                <HomePageCard imgSrc={LungCheck} title="Online Lung Check" altText="Lung Check" />
-                <HomePageCard imgSrc={MedicalHistory} title="Medical History" altText="Medical History" />
-                <HomePageCard imgSrc={FindingYourself} title="Finding Yourself" altText="Finding Yourself" />
-                <HomePageCard imgSrc={LabResults} title="Lab Results" altText="Lab Results" />
-                <HomePageCard imgSrc={DietChart} title="Your Diet Chart" altText="Diet Chart" />
+                <Link to="/lung-cancer-check" className="flex items-center p-4 bg-gray-100 rounded-lg">
+                    <img src={LungCheckIcon} alt="Lung Check" className="w-24 h-20" />
+                    <p className="ml-4 text-xl font-semibold text-purple-950">Lung Check</p>
+                </Link>
+                <div className="flex items-center p-4 bg-gray-100 rounded-lg">
+                    <img src={MedicalHistoryIcon} alt="Medical History" className="w-24 h-20" />
+                    <p className="ml-4 text-xl font-semibold text-purple-950">Medical History</p>
+                </div>
+                <div className="flex items-center p-4 bg-gray-100 rounded-lg">
+                    <img src={FindingYourselfIcon} alt="Finding Yourself" className="w-24 h-20" />
+                    <p className="ml-4 text-xl font-semibold text-purple-950">Finding Yourself</p>
+                </div>
+                <div className="flex items-center p-4 bg-gray-100 rounded-lg">
+                    <img src={LabResultsIcon} alt="Lab Results" className="w-24 h-20" />
+                    <p className="ml-4 text-xl font-semibold text-purple-950">Lab Results</p>
+                </div>
+                <div className="flex items-center p-4 bg-gray-100 rounded-lg">
+                    <img src={DietChartIcon} alt="Diet Chart" className="w-24 h-20" />
+                    <p className="ml-4 text-xl font-semibold text-purple-950">Your Diet Chart</p>
+                </div>
             </div>
             <Footer />
         </div>

@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage/HomePage';
 import NotificationPage from './pages/NotificationPage/NotificationPage';
 import SettingsPage from './pages/SettingsPage/SettingsPage';
 import StatisticsPage from './pages/StatisticsPage/StatisticsPage';
+import LungCancerCheckPage from './pages/LungCancerCheckPage/LungCancerCheckPage';
 
 const App: React.FC = () => {
     return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
                 <Route path="/notifications" element={<NotificationPage />} />
                 <Route path="/settings" element={<SettingsPage />} />
                 <Route path="/statistics" element={<StatisticsPage />} />
+                <Route path="/lung-cancer-check" element={<LungCancerCheckPage />} />
             </Routes>
         </Router>
     );
