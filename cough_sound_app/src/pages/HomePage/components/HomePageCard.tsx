@@ -6,7 +6,7 @@ interface CardProps {
     altText: string;
 }
 
-const Card: React.FC<CardProps> = ({ imgSrc, title, altText }) => {
+const HomePageCard: React.FC<CardProps> = ({ imgSrc, title, altText }) => {
     return (
         <div className="flex items-center p-4 bg-gray-100 rounded-lg border-2 hover:border-purple-800">
             <img src={imgSrc} alt={altText} className="w-24 h-20" />
@@ -15,4 +15,4 @@ const Card: React.FC<CardProps> = ({ imgSrc, title, altText }) => {
     );
 };
 
-export default Card;
+export default HomePageCard;
