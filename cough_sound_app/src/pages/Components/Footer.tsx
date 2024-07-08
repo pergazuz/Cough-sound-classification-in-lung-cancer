@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
             <NavLink
                 to="/home"
                 className={({ isActive }) =>
-                    isActive ? "text-purple-950" : "text-gray-600"
+                    isActive ? "text-purple-950" : "text-gray-600 hover:text-purple-950 transition-colors duration-300"
                 }
             >
                 <FontAwesomeIcon icon={faTh} size="lg" />
@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
             <NavLink
                 to="/statistics"
                 className={({ isActive }) =>
-                    isActive ? "text-purple-950" : "text-gray-600"
+                    isActive ? "text-purple-950" : "text-gray-600 hover:text-purple-950 transition-colors duration-300"
                 }
             >
                 <FontAwesomeIcon icon={faChartBar} size="lg" />
@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
             <NavLink
                 to="/notifications"
                 className={({ isActive }) =>
-                    isActive ? "text-purple-950" : "text-gray-600"
+                    isActive ? "text-purple-950" : "text-gray-600 hover:text-purple-950 transition-colors duration-300"
                 }
             >
                 <FontAwesomeIcon icon={faBell} size="lg" />
@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
             <NavLink
                 to="/settings"
                 className={({ isActive }) =>
-                    isActive ? "text-purple-950" : "text-gray-600"
+                    isActive ? "text-purple-950" : "text-gray-600 hover:text-purple-950 transition-colors duration-300"
                 }
             >
                 <FontAwesomeIcon icon={faCog} size="lg" />

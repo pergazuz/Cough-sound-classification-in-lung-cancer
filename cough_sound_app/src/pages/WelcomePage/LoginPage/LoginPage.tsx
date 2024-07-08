@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import WelcomeLogo from '../../../assets/welcome_logo.png';
 import { useNavigate } from 'react-router-dom';
-import  { LoginUser } from './LoginUser.ts';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { LoginUser } from './LoginUser.ts';
 
 const LoginPage: React.FC = () => {
     const navigate = useNavigate();
@@ -15,6 +17,7 @@ const LoginPage: React.FC = () => {
     // State for storing form inputs
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
+    const [showPassword, setShowPassword] = useState<boolean>(false);
     const [error, setError] = useState<string>('');
 
     // Handle form submission
@@ -26,6 +29,11 @@ const LoginPage: React.FC = () => {
         } else {
             setError('Invalid email or password');
         }
+    };
+
+    // Toggle password visibility
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
     };
 
     return (
@@ -44,14 +52,14 @@ const LoginPage: React.FC = () => {
                 />
                 <div className="relative">
                     <input
-                        type="password"
+                        type={showPassword ? "text" : "password"}
                         placeholder="Password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         className="w-full px-4 py-2 mb-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
                     />
-                    <span className="absolute right-3 top-3 cursor-pointer">
-                        <i className="eye-icon"></i> {/* Replace with actual eye icon */}
+                    <span className="absolute right-3 top-3 cursor-pointer" onClick={togglePasswordVisibility}>
+                        <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
                     </span>
                 </div>
                 <div className="flex justify-end">

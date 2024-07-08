@@ -32,7 +32,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
                 <FontAwesomeIcon
                     icon={faUserCircle}
                     size="2x"
-                    className="text-purple-950 cursor-pointer"
+                    className="text-purple-950 cursor-pointer hover:text-purple-800 transition-colors duration-300"
                     onClick={handleProfileClick}
                 />
             </header>

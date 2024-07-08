@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import WelcomeLogo from '../../../assets/welcome_logo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 const SignUpPage: React.FC = () => {
+    const [password, setPassword] = useState<string>('');
+    const [showPassword, setShowPassword] = useState<boolean>(false);
+
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+    };
+
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-white px-4">
             <h1 className="mt-4 text-3xl font-bold text-purple-950 text-center">Hello!</h1>
@@ -11,9 +20,15 @@ const SignUpPage: React.FC = () => {
                 <input type="text" placeholder="Full Name" className="w-full px-4 py-2 mb-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"/>
                 <input type="email" placeholder="Email" className="w-full px-4 py-2 mb-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"/>
                 <div className="relative">
-                    <input type="password" placeholder="Password" className="w-full px-4 py-2 mb-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"/>
-                    <span className="absolute right-3 top-3 cursor-pointer">
-                        <i className="eye-icon"></i>
+                    <input
+                        type={showPassword ? "text" : "password"}
+                        placeholder="Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        className="w-full px-4 py-2 mb-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
+                    />
+                    <span className="absolute right-3 top-3 cursor-pointer" onClick={togglePasswordVisibility}>
+                        <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
                     </span>
                 </div>
                 <div className="flex justify-end">
