@@ -68,7 +68,7 @@ const LungCancerCheckPage: React.FC = () => {
         formData.append('file', audioBlob, 'recording.wav');
 
         try {
-            const response = await fetch('http://127.0.0.1:8000/upload-audio', {
+            const response = await fetch('https://lung-cancer-cough-classification-backend.vercel.app/upload-audio', {
                 method: 'POST',
                 body: formData,
             });
