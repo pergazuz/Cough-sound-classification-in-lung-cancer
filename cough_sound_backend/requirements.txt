@@ -1,4 +1,6 @@
 fastapi==0.111.1
 
+matplotlib==3.7.5
+
 onnxruntime==1.18.1
 uvicorn==0.30.3
