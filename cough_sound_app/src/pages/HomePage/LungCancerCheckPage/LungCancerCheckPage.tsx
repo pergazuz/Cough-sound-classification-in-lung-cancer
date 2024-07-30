@@ -96,8 +96,10 @@ const LungCancerCheckPage: React.FC = () => {
             <h1 className="text-3xl font-bold text-purple-950 mb-8 text-center">Lung Cancer Check</h1>
             <img src={Logo} alt="Lung Check" className="w-80 h-80 sm:w-64 sm:h-80 md:w-80 md:h-80 mb-4 rounded-lg" />
             <div
-                className={`p-4 mb-4 w-64 bg-white rounded-lg shadow-2xl text-center transition-opacity duration-500 ${
+                className={`p-4 mb-4 w-64 bg-white rounded-lg text-center transition-opacity duration-500 ${
                     isVisible ? 'opacity-100' : 'opacity-0'
+                } ${
+                    prediction === 'Normal' ? 'shadow-lg shadow-green-700' : prediction === 'Abnormal' ? 'shadow-lg shadow-red-700' : ''
                 }`}
             >
                 {isRecording ? (
