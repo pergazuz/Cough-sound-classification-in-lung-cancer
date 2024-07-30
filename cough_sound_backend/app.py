@@ -24,7 +24,7 @@ app.add_middleware(
 os.makedirs("temp", exist_ok=True)
 
 # Load the ONNX model
-model_path = "model.onnx"
+model_path = "model/model.onnx"
 ort_session = ort.InferenceSession(model_path)
 
 def preprocess(audio_path):
