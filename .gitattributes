@@ -1,1 +1,2 @@
 cough_sound_backend/model.onnx filter=lfs diff=lfs merge=lfs -text
+cough_sound_backend/model/model.onnx filter=lfs diff=lfs merge=lfs -text
